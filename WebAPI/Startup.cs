@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace WebAPI
 {
@@ -26,7 +28,15 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<ConnectionConfig>(Configuration.GetSection("ConnectionStrings"));
-            services.AddControllers();
+            services.AddControllers()
+                // Camelcase to original property name
+                .AddNewtonsoftJson(options => {
+                    var resolver = options.SerializerSettings.ContractResolver;
+                    if (resolver != null)
+                        (resolver as DefaultContractResolver).NamingStrategy = null;
+                    
+                });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api of the battle", Version = "v1" });
