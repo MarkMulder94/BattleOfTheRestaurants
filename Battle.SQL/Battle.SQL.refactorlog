@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="88b0100a-a2cd-4bd4-bff8-67808e267045" ChangeDateTime="01/21/2020 18:41:54">
+    <Property Name="ElementName" Value="[dbo].[KoffieBattle].[datum]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoffieBattle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Datum" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="01e48e27-4d77-4ddd-b33f-c78a7f6f376b" ChangeDateTime="01/21/2020 18:41:56">
+    <Property Name="ElementName" Value="[dbo].[KoffieBattle].[gr]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoffieBattle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Groot" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b5997ba6-3378-4f75-b7a4-a8d2ec5977ea" ChangeDateTime="01/21/2020 18:41:59">
+    <Property Name="ElementName" Value="[dbo].[KoffieBattle].[med]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoffieBattle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Medium" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6a5ddc38-20f7-4e29-a1ba-0b23b16371e2" ChangeDateTime="01/21/2020 18:42:01">
+    <Property Name="ElementName" Value="[dbo].[KoffieBattle].[managerId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoffieBattle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ManagerId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0cb695d6-2717-46ed-aa0d-0ab93962d381" ChangeDateTime="01/21/2020 18:42:05">
+    <Property Name="ElementName" Value="[dbo].[KoffieBattle].[restaurantId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoffieBattle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RestaurantId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8054289a-532b-4bf5-8a42-f98fca003755" ChangeDateTime="01/21/2020 18:42:15">
+    <Property Name="ElementName" Value="[dbo].[Manager].[managerId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Manager]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ManagerId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="426adb41-3f30-4e00-a3ea-ec82a76c5678" ChangeDateTime="01/21/2020 18:42:18">
+    <Property Name="ElementName" Value="[dbo].[Manager].[restaurantId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Manager]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RestaurantId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="965d0904-a1d9-4bbf-891f-c0f82dc8a30c" ChangeDateTime="01/21/2020 18:42:21">
+    <Property Name="ElementName" Value="[dbo].[Manager].[lastName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Manager]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LastName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6804e523-7782-4909-abca-eefd271529ad" ChangeDateTime="01/21/2020 18:42:23">
+    <Property Name="ElementName" Value="[dbo].[Manager].[firstName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Manager]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FirstName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="97d7c0b7-08c5-468f-96bd-7d4b302e0fb1" ChangeDateTime="01/21/2020 20:36:37">
+    <Property Name="ElementName" Value="[dbo].[KoffieBattle].[ManagerId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoffieBattle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NameManager" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="62d54dd0-643d-4b90-9fb5-79590e347b76" ChangeDateTime="01/21/2020 20:36:45">
+    <Property Name="ElementName" Value="[dbo].[KoffieBattle].[RestaurantId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[KoffieBattle]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NameRestaurant" />
+  </Operation>
+</Operations>

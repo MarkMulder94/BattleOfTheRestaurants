@@ -1,11 +1,25 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-3">Fluid jumbo heading</h1>
-        <p class="lead">Jumbo helper text</p>
-        <hr class="my-2">
-        <p>More info</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-        </p>
+<form #form="ngForm" autocomplete="off">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-users"></i>
+        </div>
+      </div>
+      <input
+        name="firstName"
+        #firstName="ngModel"
+        [(ngModel)]="service.formData.firstName"
+        class="form-control"
+        placeholder="Voornaam"
+      />
+      <input
+        name="lastName"
+        #lastName="ngModel"
+        [(ngModel)]="service.formData.lastName"
+        class="form-control"
+        placeholder="Achternaam"
+      />
     </div>
-</div>
+  </div>
+</form>

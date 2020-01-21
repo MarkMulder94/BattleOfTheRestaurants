@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle.Library", "Battle.Library\Battle.Library.csproj", "{F68CE51A-9F64-4766-88A9-48A8979000AD}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Battle.SQL", "Battle.SQL\Battle.SQL.sqlproj", "{6C171583-D3D6-436D-AAD3-9DE5BDB5C562}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{F68CE51A-9F64-4766-88A9-48A8979000AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F68CE51A-9F64-4766-88A9-48A8979000AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F68CE51A-9F64-4766-88A9-48A8979000AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C171583-D3D6-436D-AAD3-9DE5BDB5C562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C171583-D3D6-436D-AAD3-9DE5BDB5C562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C171583-D3D6-436D-AAD3-9DE5BDB5C562}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6C171583-D3D6-436D-AAD3-9DE5BDB5C562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C171583-D3D6-436D-AAD3-9DE5BDB5C562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C171583-D3D6-436D-AAD3-9DE5BDB5C562}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
