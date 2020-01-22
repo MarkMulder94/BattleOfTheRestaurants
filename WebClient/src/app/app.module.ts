@@ -8,11 +8,12 @@ import { AppComponent } from "./app.component";
 import { ManagersComponent } from "./managers/managers.component";
 import { ManagerListService } from "./shared/Manager/manager-list.service";
 import { KoffieComponent } from "./koffie/koffie.component";
+import { KoffieBattleService } from "./shared/Koffie/koffie-battle.service";
 
 @NgModule({
   declarations: [AppComponent, ManagersComponent, KoffieComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
-  providers: [ManagerListService],
+  providers: [ManagerListService, KoffieBattleService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

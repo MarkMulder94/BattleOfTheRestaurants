@@ -1,1 +1,78 @@
-<p>koffie works!</p>
+<form #form="ngForm" autocomplete="off">
+  <label style="font-size: large; font-weight: bold;">Info Gebruiker</label>
+  <!-- Manager naam-->
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-users"></i>
+        </div>
+      </div>
+      <input
+        name="NameManager"
+        #NameManager="ngModel"
+        [(ngModel)]="service.formData.NameManager"
+        class="form-control"
+        placeholder="Voornaam"
+      />
+    </div>
+  </div>
+  <!-- Restaurant naam-->
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-utensils"></i>
+        </div>
+      </div>
+      <input
+        name="NameRestaurant"
+        #NameRestaurant="ngModel"
+        [(ngModel)]="service.formData.NameRestaurant"
+        class="form-control"
+        placeholder="Restaurant"
+      />
+    </div>
+  </div>
+  <!-- Koffie's -->
+  <label style="font-size: large; font-weight: bold;"
+    >Koffie's verkocht t/m vandaag</label
+  >
+  <div class="form-row">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text bg-white">
+          <i class="fas fa-coffee"></i>
+        </div>
+      </div>
+      <input
+        name="Medium"
+        #Medium="ngModel"
+        [(ngModel)]="service.formData.Medium"
+        class="form-control"
+        placeholder="Medium"
+      />
+      <div>
+        <div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text bg-white">
+                <i class="fas fa-coffee"></i>
+              </div>
+            </div>
+            <input
+              name="Groot"
+              #Groot="ngModel"
+              [(ngModel)]="service.formData.Groot"
+              class="form-control"
+              placeholder="Groot"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" style="margin:20px 0px; text-align: justify;">
+    Versturen
+  </button>
+</form>

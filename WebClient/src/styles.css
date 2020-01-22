@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: whitesmoke;
+}
+h1 {
+  color: lightgreen;
+}
+i {
+  max-width: 20px;
+  min-width: 20px;
+  max-height: 20px;
+  min-height: 20px;
+  color: green;
+}
