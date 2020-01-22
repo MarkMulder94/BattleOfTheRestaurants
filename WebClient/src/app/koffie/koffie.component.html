@@ -1,5 +1,5 @@
-<form #form="ngForm" autocomplete="off">
-  <label style="font-size: large; font-weight: bold;">Info Gebruiker</label>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <label style="font-size: large; font-weight: bold;">Jouw naam</label>
   <!-- Manager naam-->
   <div class="form-group">
     <div class="input-group">
@@ -11,33 +11,42 @@
       <input
         name="NameManager"
         #NameManager="ngModel"
-        [(ngModel)]="service.formData.NameManager"
+        [(ngModel)]="service.NameManager"
         class="form-control"
         placeholder="Voornaam"
       />
     </div>
   </div>
+  <hr class="my-4" />
+
   <!-- Restaurant naam-->
+  <label style="font-size: large; font-weight: bold;">Restaurant</label>
+  <p>Kies je Restaurant</p>
   <div class="form-group">
     <div class="input-group">
       <div class="input-group-prepend">
         <div class="input-group-text bg-white">
-          <i class="fas fa-utensils"></i>
+          <i class="fas fa-coffee"></i>
         </div>
       </div>
-      <input
+      <select
+        class="form-control"
         name="NameRestaurant"
         #NameRestaurant="ngModel"
-        [(ngModel)]="service.formData.NameRestaurant"
-        class="form-control"
-        placeholder="Restaurant"
-      />
+        [(ngModel)]="service.NameRestaurant"
+      >
+        <option>Zwolle-Noord</option>
+        <option>Zwolle-Zuid</option>
+        <option>Heerde</option>
+        <option>Kampen</option>
+        <option>Zwolle-Centrum</option>
+      </select>
     </div>
   </div>
+  <hr class="my-4" />
+
   <!-- Koffie's -->
-  <label style="font-size: large; font-weight: bold;"
-    >Koffie's verkocht t/m vandaag</label
-  >
+  <label style="font-size: large; font-weight: bold;">Koffie's verkocht</label>
   <div class="form-row">
     <div class="input-group">
       <div class="input-group-prepend">
@@ -48,31 +57,35 @@
       <input
         name="Medium"
         #Medium="ngModel"
-        [(ngModel)]="service.formData.Medium"
+        [(ngModel)]="service.Medium"
         class="form-control"
         placeholder="Medium"
       />
-      <div>
-        <div>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <div class="input-group-text bg-white">
-                <i class="fas fa-coffee"></i>
-              </div>
-            </div>
-            <input
-              name="Groot"
-              #Groot="ngModel"
-              [(ngModel)]="service.formData.Groot"
-              class="form-control"
-              placeholder="Groot"
-            />
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fas fa-coffee"></i>
           </div>
         </div>
+        <input
+          name="Groot"
+          #Groot="ngModel"
+          [(ngModel)]="service.Groot"
+          class="form-control"
+          placeholder="Groot"
+        />
       </div>
     </div>
+    <hr class="my-4" />
+    <div class="form-group">
+      <hr class="my-4" />
+      <button
+        class="btn btn-success btn-lg btn-block"
+        type="submit"
+        style="margin-top: 8px;"
+      >
+        Opsturen
+      </button>
+    </div>
   </div>
-  <button class="btn btn-primary" style="margin:20px 0px; text-align: justify;">
-    Versturen
-  </button>
 </form>

@@ -4,12 +4,17 @@ body {
   background-color: whitesmoke;
 }
 h1 {
-  color: lightgreen;
+  color: black;
 }
+
 i {
   max-width: 20px;
   min-width: 20px;
   max-height: 20px;
   min-height: 20px;
   color: green;
+}
+
+label {
+  color: midnightblue;
 }

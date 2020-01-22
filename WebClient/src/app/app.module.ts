@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -12,7 +13,13 @@ import { KoffieBattleService } from "./shared/Koffie/koffie-battle.service";
 
 @NgModule({
   declarations: [AppComponent, ManagersComponent, KoffieComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    NgbModule,
+    HttpClientModule
+  ],
   providers: [ManagerListService, KoffieBattleService],
   bootstrap: [AppComponent]
 })

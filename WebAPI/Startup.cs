@@ -27,6 +27,7 @@ namespace WebAPI
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.Configure<ConnectionConfig>(Configuration.GetSection("ConnectionStrings"));
             services.AddControllers()
                 // Camelcase to original property name
@@ -41,6 +42,7 @@ namespace WebAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api of the battle", Version = "v1" });
             });
+    
 
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -49,6 +51,12 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors(options =>
+            options.WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+
+
 
             app.UseHttpsRedirection();
             app.UseSwagger();
@@ -64,6 +72,11 @@ namespace WebAPI
             {
                 endpoints.MapControllers();
             });
+
+            
+
+
+         
         }
     }
 }
