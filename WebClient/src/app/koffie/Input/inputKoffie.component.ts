@@ -1,15 +1,14 @@
 import { Component, OnInit } from "@angular/core";
-import { KoffieBattleService } from "../shared/Koffie/koffie-battle.service";
+import { KoffieBattleService } from "../../shared/Koffie/koffie-battle.service";
 
 import { NgForm } from "@angular/forms";
-import { ThrowStmt } from "@angular/compiler";
 
 @Component({
-  selector: "app-koffie",
-  templateUrl: "./koffie.component.html",
+  selector: "app-inputKoffie",
+  templateUrl: "./inputKoffie.component.html",
   styles: []
 })
-export class KoffieComponent implements OnInit {
+export class inputKoffie implements OnInit {
   constructor(private service: KoffieBattleService) {}
 
   ngOnInit() {

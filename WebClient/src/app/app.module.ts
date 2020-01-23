@@ -8,12 +8,22 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ManagersComponent } from "./managers/managers.component";
 import { ManagerListService } from "./shared/Manager/manager-list.service";
-import { KoffieComponent } from "./koffie/koffie.component";
+import { inputKoffie } from "./koffie/Input/inputKoffie.component";
 import { KoffieBattleService } from "./shared/Koffie/koffie-battle.service";
-import { KoffieBattleComponent } from './koffie/battle/koffie-battle/koffie-battle.component';
+import { KoffieBattleComponent } from "./koffie/battle/koffie-battle/koffie-battle.component";
+import { JaarComponent } from "./koffie/JaarOverzicht/jaaroverzicht.component";
+import { NavigationBarComponent } from "./shared/navigation-bar/navigation-bar.component";
+import { MatSidenavModule } from "@angular/material";
 
 @NgModule({
-  declarations: [AppComponent, ManagersComponent, KoffieComponent, KoffieBattleComponent],
+  declarations: [
+    AppComponent,
+    ManagersComponent,
+    inputKoffie,
+    KoffieBattleComponent,
+    JaarComponent,
+    NavigationBarComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

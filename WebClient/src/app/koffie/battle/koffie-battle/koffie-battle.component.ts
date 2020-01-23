@@ -2,7 +2,6 @@ import { Component, OnInit, Inject } from "@angular/core";
 import { KoffieBattle } from "src/app/shared/Koffie/koffie-battle.model";
 import { HttpClient } from "@angular/common/http";
 import { KoffieBattleService } from "src/app/shared/Koffie/koffie-battle.service";
-import { createWriteStream } from "fs";
 
 @Component({
   selector: "app-koffie-battle",
