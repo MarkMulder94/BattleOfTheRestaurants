@@ -1,0 +1,29 @@
+<div
+  class="container-fluid"
+  style="border:  2px solid #cecece;
+min-width: 50%; min-height: 100%;
+"
+>
+  <h1 id="tableLabel">Restaurants</h1>
+  <p *ngIf="!KoffieVerkocht"><em>Loading...</em></p>
+
+  <table
+    class="table table-striped"
+    aria-labelledby="tableLabel"
+    *ngIf="KoffieVerkocht"
+  >
+    <thead>
+      <tr>
+        <th>Restaurant</th>
+        <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let koffie of KoffieVerkocht">
+        <td>{{ koffie.NameRestaurant }}</td>
+        <td>{{ koffie.Percentage }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="submit" onclick="{this.onSubmit}">Refresh</button>
+</div>

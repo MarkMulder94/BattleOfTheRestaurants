@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Battle.Library.DataAcces;
 using Battle.Library.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Battle.Library.DataAcces.Koffie;
 
 namespace WebAPI.Controllers
 {
@@ -14,28 +13,40 @@ namespace WebAPI.Controllers
     [ApiController]
     public class KoffieBattleController : ControllerBase
     {
-        SqlDataAcces _con;
+        // afblijven
+        KoffieDataService _con;
         public KoffieBattleController(IOptions<ConnectionConfig> connectionConfig)
         {
             var connection = connectionConfig.Value;
             string connectionString = connection.Thuis;
-            _con = new SqlDataAcces(connectionString);
+            _con = new KoffieDataService(connectionString);
         }
 
-        // Alle
+        // Laatste input
         [HttpGet]
         public IEnumerable<KoffieBattle> GetKoffieBattleLive()
         {
             return _con.LiveKoffieBattle().Where(x => x.datum.Month == DateTime.Now.Month);
         }
-
-        // Deze maand
+        // Laatste input refactor?
+        [HttpGet("last/{restaurant}")]
+        public IEnumerable<KoffieBattle> GetKoffieBattleLiveAsync(string restaurant)
+        {
+            return _con.LastInputPerRestaurant(restaurant).Where(x => x.datum.Month == DateTime.Now.Month);
+        }
+        // Specifieke maand
         [HttpGet("{month}/{restaurant}")]
         public KoffieBattle GetMonthResult(int month, string restaurant)
         {
             return _con.MaandCijfer(restaurant).Where(x => x.datum.Month == month).LastOrDefault();
         }
-
+        // volledig jaar
+        [HttpGet("year/{year}/{restaurant}")]
+        public List<KoffieBattle> GetYearResultsPerMonth(int year, string restaurant)
+        {
+            return _con.JaarCijfer(restaurant, year);
+        }
+        // insert
         [Route("/post")]
         [HttpPost]
         public bool Post([FromBody]KoffieBattle koffieBattle)

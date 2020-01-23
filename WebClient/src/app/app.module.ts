@@ -10,9 +10,10 @@ import { ManagersComponent } from "./managers/managers.component";
 import { ManagerListService } from "./shared/Manager/manager-list.service";
 import { KoffieComponent } from "./koffie/koffie.component";
 import { KoffieBattleService } from "./shared/Koffie/koffie-battle.service";
+import { KoffieBattleComponent } from './koffie/battle/koffie-battle/koffie-battle.component';
 
 @NgModule({
-  declarations: [AppComponent, ManagersComponent, KoffieComponent],
+  declarations: [AppComponent, ManagersComponent, KoffieComponent, KoffieBattleComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
