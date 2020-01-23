@@ -10,22 +10,18 @@ import { KoffieBattleService } from "src/app/shared/Koffie/koffie-battle.service
 })
 export class KoffieBattleComponent implements OnInit {
   public KoffieVerkocht: KoffieBattle[];
-
-  readonly rootURL = "https://localhost:44366/";
-
+  restaurant: string;
   constructor(private service: KoffieBattleService, private http: HttpClient) {}
 
   ngOnInit() {
-    this.getKoffieBattle();
+    this.LoadData();
   }
-  onSubmit() {
-    this.getKoffieBattle();
-    console.log(this.getKoffieBattle());
-  }
-
-  getKoffieBattle() {
-    this.http.get<KoffieBattle[]>(this.rootURL + "koffie").subscribe(result => {
-      this.KoffieVerkocht = result;
-    });
+  LoadData() {
+    this.http
+      .get<KoffieBattle[]>(this.service.rootURL + "koffie")
+      .subscribe(result => {
+        this.KoffieVerkocht = result;
+        return this.KoffieVerkocht;
+      });
   }
 }

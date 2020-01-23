@@ -1,1 +1,29 @@
-<p>jaaroverzicht works!</p>
+<div
+  class="jumbotron"
+  style="border:  5px solid #cecece;
+"
+>
+  <p *ngIf="!KoffieVerkocht"><em>Loading...</em></p>
+  <table
+    class="table table-striped align-self-md-start"
+    aria-labelledby="tableLabel"
+    *ngIf="KoffieVerkocht"
+    style="min-width: 100%;"
+  >
+    <thead>
+      <h4>Ingevuld tot en met vandaag (YTD)</h4>
+      <tr>
+        <th>Restaurant</th>
+        <th>Percentage</th>
+        <th>maand</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let koffie of KoffieVerkocht">
+        <td>{{ koffie.NameRestaurant }}</td>
+        <td>{{ koffie.Percentage }}</td>
+        <td>{{ koffie.datum | date: "MMMM" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

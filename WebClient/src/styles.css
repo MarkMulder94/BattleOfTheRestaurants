@@ -38,3 +38,9 @@ header[role="banner"] #logo-main {
   padding-left: 30px;
   padding-right: 30px;
 }
+.table {
+  border-radius: 5px;
+  width: 50%;
+  margin: 0px auto;
+  float: none;
+}

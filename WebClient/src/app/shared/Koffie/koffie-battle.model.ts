@@ -4,5 +4,5 @@ export class KoffieBattle {
   NameRestaurant: string;
   Groot: number;
   Medium: number;
-  datum: string;
+  datum: Date;
 }

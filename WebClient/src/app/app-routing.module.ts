@@ -7,7 +7,7 @@ import { KoffieBattleComponent } from "./koffie/battle/koffie-battle/koffie-batt
 const routes: Routes = [
   { path: "current", component: KoffieBattleComponent },
   { path: "jaar", component: JaarComponent },
-  { path: "**", component: KoffieBattleComponent }
+  { path: "jaar/:restaurant", component: JaarComponent }
 ];
 
 @NgModule({

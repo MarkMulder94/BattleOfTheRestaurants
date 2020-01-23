@@ -9,6 +9,7 @@ import { catchError, map, tap } from "rxjs/operators";
 })
 export class KoffieBattleService {
   formData: KoffieBattle;
+  public KoffieVerkocht: KoffieBattle[];
 
   readonly rootURL = "https://localhost:44366/";
   list: KoffieBattle;
